@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Incorrect attempt to access the innerHTML of a non-existent element
+    let myDiv = document.getElementById("myDiv2");
+    if (myDiv) {
+      myDiv.innerHTML = "<p>New text</p>";
+    } else {
+      console.error("Element not found");
+    }
+  </script>
+</body>
+</html>
